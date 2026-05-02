@@ -60,21 +60,8 @@ export default function HomePage() {
 
         {/* Social proof */}
         <div className="flex items-center justify-center gap-3 mt-10">
-          <div className="flex -space-x-2">
-            {["AK", "SR", "MJ", "PL"].map((initials, i) => (
-              <div
-                key={i}
-                className="w-8 h-8 rounded-full border-2 border-[#0f0e0d] flex items-center justify-center text-xs font-semibold text-white"
-                style={{
-                  background: ["#5b7fff", "#ff6b6b", "#ffa94d", "#51cf66"][i],
-                }}
-              >
-                {initials}
-              </div>
-            ))}
-          </div>
-          <p className="text-sm text-white/40">
-            <span className="text-white font-medium">47 people</span> already generating posts
+          <p className="text-sm text-white/40 mt-10">
+          Free during early access · No credit card required
           </p>
         </div>
       </section>
