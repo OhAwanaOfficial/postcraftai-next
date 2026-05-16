@@ -212,13 +212,11 @@ export default function LinkedInPostWriterPage() {
             ].map(({ icon, title, desc }) => (
               <div
                 key={title}
-                className="border border-gray-200 rounded-lg p-4 flex gap-3"
+                className="border-l-4 border-blue-600 bg-blue-50 rounded-lg p-4"
               >
                 <span className="text-2xl">{icon}</span>
-                <div>
-                  <p className="font-semibold text-gray-900 text-sm">{title}</p>
-                  <p className="text-gray-500 text-sm mt-1">{desc}</p>
-                </div>
+                <p className="font-semibold text-gray-900 text-base mt-2">{title}</p>
+                <p className="text-gray-800 text-sm mt-2 leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>

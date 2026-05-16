@@ -158,41 +158,39 @@ export default function HowToWriteLinkedInPostPage() {
             But volume alone doesn't work. LinkedIn's algorithm rewards posts
             that generate early engagement (likes and comments in the first
             hour). That means your writing quality directly determines your
-            reach. A well-structured post from an account with 500 connections
-            can outperform a poorly-written post from someone with 10,000.
+            reach. <strong>A well-structured post from an account with 500 connections
+            can outperform a poorly-written post from someone with 10,000.</strong>
           </P>
 
           <H2 id="anatomy">The Anatomy of a Great LinkedIn Post</H2>
           <P>Every high-performing LinkedIn post has three parts:</P>
-          <div className="bg-gray-50 border border-gray-200 rounded-lg p-5 mb-6">
-            <div className="space-y-4">
-              {[
-                {
-                  label: "Hook",
-                  color: "bg-blue-100 text-blue-800",
-                  desc: 'The first 1–2 lines visible before "see more." This determines whether someone stops scrolling.',
-                },
-                {
-                  label: "Body",
-                  color: "bg-green-100 text-green-800",
-                  desc: "The value delivery — your story, lesson, opinion, or data. Short paragraphs, line breaks.",
-                },
-                {
-                  label: "CTA",
-                  color: "bg-purple-100 text-purple-800",
-                  desc: 'The closing action — a question, a link, an invitation to comment. Never skip this.',
-                },
-              ].map(({ label, color, desc }) => (
-                <div key={label} className="flex gap-3 items-start">
-                  <span
-                    className={`text-xs font-bold px-2 py-1 rounded ${color} flex-shrink-0 mt-0.5`}
-                  >
-                    {label}
-                  </span>
-                  <p className="text-sm text-gray-700">{desc}</p>
-                </div>
-              ))}
-            </div>
+          <div className="space-y-3 mb-6">
+            {[
+              {
+                label: "Hook",
+                color: "bg-blue-600",
+                desc: 'The first 1–2 lines visible before "see more." This determines whether someone stops scrolling.',
+              },
+              {
+                label: "Body",
+                color: "bg-green-600",
+                desc: "The value delivery — your story, lesson, opinion, or data. Short paragraphs, line breaks.",
+              },
+              {
+                label: "CTA",
+                color: "bg-purple-600",
+                desc: 'The closing action — a question, a link, an invitation to comment. Never skip this.',
+              },
+            ].map(({ label, color, desc }) => (
+              <div key={label} className="flex gap-3 items-start">
+                <span
+                  className={`text-xs font-bold px-3 py-1.5 rounded text-white flex-shrink-0 mt-0.5 ${color}`}
+                >
+                  {label}
+                </span>
+                <p className="text-sm text-gray-800 leading-relaxed">{desc}</p>
+              </div>
+            ))}
           </div>
 
           <H2 id="hook">Step 1 — Write a Scroll-Stopping Hook</H2>
@@ -266,35 +264,35 @@ export default function HowToWriteLinkedInPostPage() {
             outperforms one with 100 likes. Your CTA should invite a response.
           </P>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-  {[
-    {
-      type: "Question CTA",
-      example: `"What's your biggest challenge with LinkedIn posting? Drop it below."`,
-    },
-    {
-      type: "Opinion CTA",
-      example: `"Agree or disagree? Let me know in the comments."`,
-    },
-    {
-      type: "Resource CTA",
-      example: `"I built a free tool for this — link in comments."`,
-    },
-    {
-      type: "Tag CTA",
-      example: `"Tag someone who needs to read this."`,
-    },
-  ].map(({ type, example }) => (
-    <div
-      key={type}
-      className="bg-purple-50 border border-purple-100 rounded p-3"
-    >
-      <p className="text-xs font-semibold text-purple-700 mb-1">
-        {type}
-      </p>
-      <p className="text-xs text-gray-600 italic">{example}</p>
-    </div>
-  ))}
-</div>
+            {[
+              {
+                type: "Question CTA",
+                example: '"What's your biggest challenge with LinkedIn posting? Drop it below."',
+              },
+              {
+                type: "Opinion CTA",
+                example: '"Agree or disagree? Let me know in the comments."',
+              },
+              {
+                type: "Resource CTA",
+                example: '"I built a free tool for this — link in comments."',
+              },
+              {
+                type: "Tag CTA",
+                example: '"Tag someone who needs to read this."',
+              },
+            ].map(({ type, example }) => (
+              <div
+                key={type}
+                className="bg-indigo-50 border-l-4 border-indigo-600 rounded p-4"
+              >
+                <p className="text-sm font-semibold text-indigo-900 mb-2">
+                  {type}
+                </p>
+                <p className="text-sm text-gray-800 italic leading-relaxed">{example}</p>
+              </div>
+            ))}
+          </div>
 
           <H2 id="length">How Long Should a LinkedIn Post Be?</H2>
           <P>
