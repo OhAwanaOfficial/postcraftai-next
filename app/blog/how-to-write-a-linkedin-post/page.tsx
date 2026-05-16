@@ -267,7 +267,7 @@ export default function HowToWriteLinkedInPostPage() {
             {[
               {
                 type: "Question CTA",
-                example: '"What's your biggest challenge with LinkedIn posting? Drop it below."',
+                example: `"What's your biggest challenge with LinkedIn posting? Drop it below."`,
               },
               {
                 type: "Opinion CTA",
