@@ -266,35 +266,35 @@ export default function HowToWriteLinkedInPostPage() {
             outperforms one with 100 likes. Your CTA should invite a response.
           </P>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-            {[
-              {
-                type: "Question CTA",
-                example: '"What's your biggest challenge with LinkedIn posting? Drop it below."',
-              },
-              {
-                type: "Opinion CTA",
-                example: '"Agree or disagree? Let me know in the comments."',
-              },
-              {
-                type: "Resource CTA",
-                example: '"I built a free tool for this — link in comments."',
-              },
-              {
-                type: "Tag CTA",
-                example: '"Tag someone who needs to read this."',
-              },
-            ].map(({ type, example }) => (
-              <div
-                key={type}
-                className="bg-purple-50 border border-purple-100 rounded p-3"
-              >
-                <p className="text-xs font-semibold text-purple-700 mb-1">
-                  {type}
-                </p>
-                <p className="text-xs text-gray-600 italic">{example}</p>
-              </div>
-            ))}
-          </div>
+  {[
+    {
+      type: "Question CTA",
+      example: `"What's your biggest challenge with LinkedIn posting? Drop it below."`,
+    },
+    {
+      type: "Opinion CTA",
+      example: `"Agree or disagree? Let me know in the comments."`,
+    },
+    {
+      type: "Resource CTA",
+      example: `"I built a free tool for this — link in comments."`,
+    },
+    {
+      type: "Tag CTA",
+      example: `"Tag someone who needs to read this."`,
+    },
+  ].map(({ type, example }) => (
+    <div
+      key={type}
+      className="bg-purple-50 border border-purple-100 rounded p-3"
+    >
+      <p className="text-xs font-semibold text-purple-700 mb-1">
+        {type}
+      </p>
+      <p className="text-xs text-gray-600 italic">{example}</p>
+    </div>
+  ))}
+</div>
 
           <H2 id="length">How Long Should a LinkedIn Post Be?</H2>
           <P>
