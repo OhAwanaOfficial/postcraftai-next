@@ -25,28 +25,22 @@ export const metadata: Metadata = {
   },
 };
 
-// ── JSON-LD structured data ──────────────────────────────────────────────────
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   name: "PostCraft AI LinkedIn Post Writer",
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
-  offers: {
-    "@type": "Offer",
-    price: "0",
-    priceCurrency: "USD",
-  },
+  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
   description:
     "AI-powered LinkedIn post writer that generates hooks, CTAs, and full posts optimized for engagement.",
   url: "https://postcraftai-next.vercel.app/linkedin-post-writer",
 };
 
-// ── FAQ data (targets question-based keywords) ───────────────────────────────
 const faqs = [
   {
     q: "What is an AI LinkedIn post writer?",
-    a: "An AI LinkedIn post writer is a tool that uses artificial intelligence to generate LinkedIn posts for you. You provide a topic or idea, and the AI writes a complete post — including a hook, body, and CTA — optimized for LinkedIn's algorithm and audience engagement.",
+    a: "An AI LinkedIn post writer uses artificial intelligence to generate LinkedIn posts from your topic or idea — including a hook, body, and CTA — optimized for LinkedIn's algorithm and audience engagement.",
   },
   {
     q: "Is PostCraft AI's LinkedIn post writer free?",
@@ -54,45 +48,48 @@ const faqs = [
   },
   {
     q: "How do I write a good LinkedIn post?",
-    a: "A great LinkedIn post starts with a strong hook (first line that stops the scroll), delivers value in the body (tips, stories, or insights), and ends with a CTA (question, link, or call to action). Keeping posts between 150–300 words typically performs best for engagement.",
+    a: "A great LinkedIn post starts with a strong hook (first line that stops the scroll), delivers value in the body (tips, stories, or insights), and ends with a CTA (question, link, or call to action). Keeping posts between 150–300 words typically performs best.",
   },
   {
     q: "Can I use AI-generated LinkedIn posts?",
-    a: "Yes. LinkedIn does not prohibit AI-assisted content. Many professionals use AI tools to draft posts, which they then edit to match their voice. PostCraft AI is designed to give you a strong starting point that you personalize before publishing.",
+    a: "Yes. LinkedIn does not prohibit AI-assisted content. Many professionals use AI tools to draft posts, which they then edit to match their voice. PostCraft AI gives you a strong starting point that you personalize before publishing.",
   },
   {
     q: "What makes a LinkedIn post go viral?",
-    a: "Viral LinkedIn posts typically have: a scroll-stopping first line, a relatable or surprising insight, a clear structure (short paragraphs, line breaks), and a CTA that invites comments. Consistency also matters — posting 3–5 times per week compounds over time.",
+    a: "Viral LinkedIn posts have a scroll-stopping first line, a relatable or surprising insight, a clear structure (short paragraphs, line breaks), and a CTA that invites comments. Consistency also matters — posting 3–5 times per week compounds over time.",
+  },
+  {
+    q: "What percent of LinkedIn posts are AI generated?",
+    a: "Estimates suggest 10–30% of LinkedIn posts now involve some AI assistance, though exact figures vary. The trend is rising rapidly as tools like PostCraft AI make it easier to produce consistent, high-quality content.",
   },
 ];
 
-// ── Reusable section heading ─────────────────────────────────────────────────
-function SectionHeading({ children }: { children: React.ReactNode }) {
+function H2({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-12">{children}</h2>
+    <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 mt-12">
+      {children}
+    </h2>
   );
 }
 
-// ── Page component ────────────────────────────────────────────────────────────
 export default function LinkedInPostWriterPage() {
   return (
     <>
-      {/* JSON-LD */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-
       <main className="max-w-3xl mx-auto px-4 py-12">
-        {/* ── Hero ── */}
+
+        {/* Hero */}
         <header className="text-center mb-10">
-          <p className="text-sm font-semibold text-blue-600 uppercase tracking-widest mb-2">
+          <p className="text-sm font-semibold text-blue-500 uppercase tracking-widest mb-2">
             Free Tool
           </p>
-          <h1 className="text-4xl font-extrabold text-gray-900 leading-tight mb-4">
+          <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white leading-tight mb-4">
             LinkedIn Post Writer
           </h1>
-          <p className="text-lg text-gray-600 max-w-xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-xl mx-auto">
             Generate scroll-stopping LinkedIn posts in seconds. Hooks, CTAs, and
             full posts — powered by AI, personalized by you.
           </p>
@@ -105,39 +102,36 @@ export default function LinkedInPostWriterPage() {
             </Link>
             <Link
               href="/sign-up"
-              className="inline-block border border-gray-300 hover:border-gray-400 text-gray-700 font-semibold px-6 py-3 rounded-lg transition-colors"
+              className="inline-block border border-gray-400 dark:border-gray-500 text-gray-800 dark:text-gray-200 font-semibold px-6 py-3 rounded-lg transition-colors hover:border-gray-600 dark:hover:border-gray-300"
             >
               Sign Up Free
             </Link>
           </div>
-          <p className="text-xs text-gray-400 mt-3">
+          <p className="text-sm text-gray-500 dark:text-gray-400 mt-3">
             3 free posts/day · No credit card required
           </p>
         </header>
 
-        {/* ── What is a LinkedIn Post Writer ── */}
-        <section aria-labelledby="what-is">
-          <SectionHeading>What Is a LinkedIn Post Writer?</SectionHeading>
-          <p className="text-gray-700 leading-relaxed">
-            A <strong>LinkedIn post writer</strong> is a tool — AI-powered or
-            manual — that helps you create LinkedIn content faster and more
-            effectively. Instead of staring at a blank screen, you describe your
-            topic and the tool generates a structured post: a hook that stops
-            the scroll, a body that delivers value, and a CTA that drives
-            engagement.
+        {/* What Is section */}
+        <section>
+          <H2>What Is a LinkedIn Post Writer?</H2>
+          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+            A <strong className="text-gray-900 dark:text-white">LinkedIn post writer</strong> is
+            a tool — AI-powered or manual — that helps you create LinkedIn content faster and
+            more effectively. Instead of staring at a blank screen, you describe your topic and
+            the tool generates a structured post: a hook that stops the scroll, a body that
+            delivers value, and a CTA that drives engagement.
           </p>
-          <p className="text-gray-700 leading-relaxed mt-4">
-            PostCraft AI's LinkedIn post writer uses Llama 3.3 70B (via Groq)
-            to generate posts in under 3 seconds. It also scores your hook
-            1–10, lets you regenerate individual sections, and shows a live
-            LinkedIn preview — so you know exactly what you're publishing before
-            you hit post.
+          <p className="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
+            PostCraft AI uses Llama 3.3 70B (via Groq) to generate posts in under 3 seconds. It
+            scores your hook 1–10, lets you regenerate individual sections, and shows a live
+            LinkedIn preview — so you know exactly what you're publishing before you hit post.
           </p>
         </section>
 
-        {/* ── How It Works ── */}
-        <section aria-labelledby="how-it-works">
-          <SectionHeading>How the LinkedIn Post Writer Works</SectionHeading>
+        {/* How It Works */}
+        <section>
+          <H2>How the LinkedIn Post Writer Works</H2>
           <ol className="space-y-4 mt-2">
             {[
               {
@@ -166,128 +160,82 @@ export default function LinkedInPostWriterPage() {
                   {step}
                 </span>
                 <div>
-                  <p className="font-semibold text-gray-900">{title}</p>
-                  <p className="text-gray-600 text-sm mt-1">{desc}</p>
+                  <p className="font-semibold text-gray-900 dark:text-white">{title}</p>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">{desc}</p>
                 </div>
               </li>
             ))}
           </ol>
         </section>
 
-        {/* ── Features ── */}
-        <section aria-labelledby="features">
-          <SectionHeading>Features</SectionHeading>
+        {/* Features */}
+        <section>
+          <H2>Features</H2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
-              {
-                icon: "⚡",
-                title: "Instant generation",
-                desc: "Posts generated in under 3 seconds via Groq's LPU inference.",
-              },
-              {
-                icon: "🎯",
-                title: "Hook scorer",
-                desc: "Every post gets a hook quality score (1–10) with a visual indicator.",
-              },
-              {
-                icon: "🔄",
-                title: "Regenerate sections",
-                desc: "Rewrite just the hook, just the CTA, or the full post.",
-              },
-              {
-                icon: "👁️",
-                title: "LinkedIn preview",
-                desc: "See exactly how your post will look before publishing.",
-              },
-              {
-                icon: "📊",
-                title: "Character counter",
-                desc: "Stay within LinkedIn's 3,000 character limit automatically.",
-              },
-              {
-                icon: "📝",
-                title: "Post history",
-                desc: "Your last 5 generated posts saved locally for easy access.",
-              },
+              { icon: "⚡", title: "Instant generation", desc: "Posts generated in under 3 seconds via Groq's LPU inference." },
+              { icon: "🎯", title: "Hook scorer", desc: "Every post gets a hook quality score (1–10) with a visual indicator." },
+              { icon: "🔄", title: "Regenerate sections", desc: "Rewrite just the hook, just the CTA, or the full post." },
+              { icon: "👁️", title: "LinkedIn preview", desc: "See exactly how your post will look before publishing." },
+              { icon: "📊", title: "Character counter", desc: "Stay within LinkedIn's 3,000 character limit automatically." },
+              { icon: "📝", title: "Post history", desc: "Your last 5 generated posts saved locally for easy access." },
             ].map(({ icon, title, desc }) => (
               <div
                 key={title}
-                className="border-l-4 border-blue-600 bg-blue-50 rounded-lg p-4"
+                className="border-l-4 border-blue-500 bg-blue-50 dark:bg-blue-950 rounded-lg p-4"
               >
                 <span className="text-2xl">{icon}</span>
-                <p className="font-semibold text-gray-900 text-base mt-2">{title}</p>
-                <p className="text-gray-800 text-sm mt-2 leading-relaxed">{desc}</p>
+                <p className="font-semibold text-gray-900 dark:text-white text-base mt-2">{title}</p>
+                <p className="text-gray-700 dark:text-gray-300 text-sm mt-1 leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* ── Tips for writing LinkedIn posts ── */}
-        <section aria-labelledby="tips">
-          <SectionHeading>
-            Tips for Writing High-Performing LinkedIn Posts
-          </SectionHeading>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Whether you use AI or write manually, these principles apply to
-            every great <strong>LinkedIn post</strong>:
+        {/* Tips */}
+        <section>
+          <H2>Tips for Writing High-Performing LinkedIn Posts</H2>
+          <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+            Whether you use AI or write manually, these principles apply to every great{" "}
+            <strong className="text-gray-900 dark:text-white">LinkedIn post</strong>:
           </p>
-          <ul className="space-y-3 text-gray-700">
+          <ul className="space-y-4">
             {[
-              {
-                tip: "Lead with a hook",
-                detail:
-                  'The first line determines whether someone clicks "see more." Make it a bold statement, a surprising stat, or a relatable frustration.',
-              },
-              {
-                tip: "Use short paragraphs",
-                detail:
-                  "LinkedIn compresses long walls of text. 1–2 sentences per paragraph keeps readers scrolling down.",
-              },
-              {
-                tip: "Add a CTA",
-                detail:
-                  "End with a question, a link, or an invitation to comment. Posts with CTAs get 2–3x more engagement.",
-              },
-              {
-                tip: "Post consistently",
-                detail:
-                  "LinkedIn rewards consistency. 3–5 posts per week compounds your reach over months.",
-              },
-              {
-                tip: "Don't use hashtags excessively",
-                detail:
-                  "1–3 relevant hashtags is the sweet spot. Stacking 10+ hashtags looks spammy and hurts reach.",
-              },
+              { tip: "Lead with a hook", detail: 'The first line determines whether someone clicks "see more." Make it a bold statement, a surprising stat, or a relatable frustration.' },
+              { tip: "Use short paragraphs", detail: "LinkedIn compresses long walls of text. 1–2 sentences per paragraph keeps readers scrolling down." },
+              { tip: "Add a CTA", detail: "End with a question, a link, or an invitation to comment. Posts with CTAs get 2–3x more engagement." },
+              { tip: "Post consistently", detail: "LinkedIn rewards consistency. 3–5 posts per week compounds your reach over months." },
+              { tip: "Don't use hashtags excessively", detail: "1–3 relevant hashtags is the sweet spot. Stacking 10+ hashtags looks spammy and hurts reach." },
             ].map(({ tip, detail }) => (
-              <li key={tip} className="flex gap-2">
-                <span className="text-blue-600 font-bold mt-0.5">→</span>
-                <span>
-                  <strong>{tip}:</strong> {detail}
+              <li key={tip} className="flex gap-3">
+                <span className="text-blue-500 font-bold mt-0.5 flex-shrink-0">→</span>
+                <span className="text-gray-700 dark:text-gray-300">
+                  <strong className="text-gray-900 dark:text-white">{tip}:</strong> {detail}
                 </span>
               </li>
             ))}
           </ul>
         </section>
 
-        {/* ── CTA block ── */}
-        <section className="bg-blue-50 border border-blue-100 rounded-xl p-6 mt-12 text-center">
-          <h2 className="text-xl font-bold text-gray-900 mb-2">
+        {/* CTA Block — solid blue so it works on both themes */}
+        <section className="bg-blue-600 rounded-xl p-6 mt-12 text-center">
+          <h2 className="text-xl font-bold text-white mb-2">
             Ready to write your next LinkedIn post?
           </h2>
-          <p className="text-gray-600 mb-4 text-sm">
+          <p className="text-blue-100 mb-4 text-sm">
             Start free. No credit card. 3 posts/day on the free plan.
           </p>
           <Link
             href="/generate"
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+            className="inline-block bg-white hover:bg-gray-100 text-blue-700 font-semibold px-6 py-3 rounded-lg transition-colors"
           >
             Try PostCraft AI Free →
           </Link>
         </section>
 
-        {/* ── FAQ ── */}
-        <section aria-labelledby="faq" className="mt-12">
-          <SectionHeading>Frequently Asked Questions</SectionHeading>
+        {/* FAQ */}
+        <section className="mt-12">
+          <H2>Frequently Asked Questions</H2>
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
@@ -304,40 +252,38 @@ export default function LinkedInPostWriterPage() {
           />
           <div className="space-y-6">
             {faqs.map(({ q, a }) => (
-              <div key={q}>
-                <h3 className="font-semibold text-gray-900">{q}</h3>
-                <p className="text-gray-600 mt-1 text-sm leading-relaxed">{a}</p>
+              <div key={q} className="border-b border-gray-200 dark:border-gray-700 pb-5">
+                <h3 className="font-semibold text-gray-900 dark:text-white text-base">{q}</h3>
+                <p className="text-gray-600 dark:text-gray-400 mt-2 text-sm leading-relaxed">{a}</p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* ── Internal links ── */}
-        <section className="mt-12 pt-8 border-t border-gray-200">
-          <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-4">
+        {/* Internal links */}
+        <section className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+          <h2 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-widest mb-4">
             Related Resources
           </h2>
           <ul className="space-y-2 text-sm">
             <li>
-              <Link
-                href="/blog/how-to-write-a-linkedin-post"
-                className="text-blue-600 hover:underline"
-              >
+              <Link href="/blog/how-to-write-a-linkedin-post" className="text-blue-500 hover:underline">
                 How to Write a LinkedIn Post That Gets Noticed (Complete Guide)
               </Link>
             </li>
             <li>
-              <Link href="/generate" className="text-blue-600 hover:underline">
+              <Link href="/generate" className="text-blue-500 hover:underline">
                 PostCraft AI Generator — Try It Now
               </Link>
             </li>
             <li>
-              <Link href="/" className="text-blue-600 hover:underline">
+              <Link href="/" className="text-blue-500 hover:underline">
                 PostCraft AI — AI LinkedIn Post Generator
               </Link>
             </li>
           </ul>
         </section>
+
       </main>
     </>
   );
